@@ -193,13 +193,15 @@ namespace OpenAL
 		public const int AL_FILTER_HIGHPASS =				0x0002;
 		public const int AL_FILTER_BANDPASS =				0x0003;
 
+		/* TODO: EFX Default Value Constants! */
+
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alGenEffects(IntPtr n, uint[] effects);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenEffects(IntPtr n, ref uint effects);
+		public static extern void alGenEffects(IntPtr n, out uint effects);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
@@ -274,7 +276,7 @@ namespace OpenAL
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenFilters(IntPtr n, ref uint filters);
+		public static extern void alGenFilters(IntPtr n, out uint filters);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
@@ -354,7 +356,7 @@ namespace OpenAL
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alGenAuxiliaryEffectSlots(
 			IntPtr n,
-			ref uint effectslots
+			out uint effectslots
 		);
 
 		/* n refers to an ALsizei */

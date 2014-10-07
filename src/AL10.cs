@@ -256,7 +256,7 @@ namespace OpenAL
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alGenSources(IntPtr n, uint[] sources);
 
-		/* n refers to an ALsizei. Overload provided to avoid int[] alloc. */
+		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alGenSources(IntPtr n, out uint sources);
 
@@ -411,12 +411,28 @@ namespace OpenAL
 			uint[] buffers
 		);
 
+		/* nb refers to an ALsizei. Overload provided to avoid uint[] alloc. */
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern void alSourceQueueBuffers(
+			uint source,
+			IntPtr nb,
+			ref uint buffers
+		);
+
 		/* nb refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alSourceUnqueueBuffers(
 			uint source,
 			IntPtr nb,
 			uint[] buffers
+		);
+
+		/* nb refers to an ALsizei. Overload provided to avoid uint[] alloc. */
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern void alSourceUnqueueBuffers(
+			uint source,
+			IntPtr nb,
+			ref uint buffers
 		);
 
 		/* n refers to an ALsizei */
@@ -433,7 +449,7 @@ namespace OpenAL
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alDeleteBuffers(IntPtr n, out uint buffers);
+		public static extern void alDeleteBuffers(IntPtr n, ref uint buffers);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern bool alIsBuffer(uint buffer);
@@ -454,6 +470,16 @@ namespace OpenAL
 			uint buffer,
 			int format,
 			short[] data,
+			IntPtr size,
+			IntPtr freq
+		);
+
+		/* size and freq refer to an ALsizei */
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern void alBufferData(
+			uint buffer,
+			int format,
+			float[] data,
 			IntPtr size,
 			IntPtr freq
 		);

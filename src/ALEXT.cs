@@ -38,6 +38,9 @@ namespace OpenAL
 		/* TODO: All OpenAL Soft extensions! Complete as needed. */
 
 		/* typedef int ALenum */
+		public const int AL_FORMAT_MONO_FLOAT32 =		0x10010;
+		public const int AL_FORMAT_STEREO_FLOAT32 =		0x10011;
+
 		public const int AL_LOOP_POINTS_SOFT =			0x2015;
 
 		public const int AL_UNPACK_BLOCK_ALIGNMENT_SOFT =	0x200C;
