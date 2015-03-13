@@ -112,17 +112,8 @@ namespace OpenAL
 		);
 
 		/* device refers to an ALCdevice* */
-		[DllImport(nativeLibName, EntryPoint = "alcGetString", CallingConvention = CallingConvention.Cdecl)]
-		private static extern IntPtr INTERNAL_alcGetString(
-			IntPtr device,
-			int param
-		);
-		public static string alcGetString(IntPtr device, int param)
-		{
-			return Marshal.PtrToStringAnsi(
-				INTERNAL_alcGetString(device, param)
-			);
-		}
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern IntPtr alcGetString(IntPtr device, int param);
 
 		/* device refers to an ALCdevice*, size to an ALCsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
