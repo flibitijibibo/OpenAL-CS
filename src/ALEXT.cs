@@ -38,8 +38,8 @@ namespace OpenAL
 		/* TODO: All OpenAL Soft extensions! Complete as needed. */
 
 		/* typedef int ALenum */
-		public const int ALC_DEFAULT_ALL_DEVICES_SPECIFIER = 0x1012;
-		public const int ALC_ALL_DEVICES_SPECIFIER = 0x1013;
+		public const int ALC_DEFAULT_ALL_DEVICES_SPECIFIER =	0x1012;
+		public const int ALC_ALL_DEVICES_SPECIFIER =		0x1013;
 
 		public const int AL_FORMAT_MONO_FLOAT32 =		0x10010;
 		public const int AL_FORMAT_STEREO_FLOAT32 =		0x10011;
