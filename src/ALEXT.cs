@@ -35,6 +35,8 @@ namespace OpenAL
 {
 	public static class ALEXT
 	{
+		private const string nativeLibName = "soft_oal.dll";
+
 		/* TODO: All OpenAL Soft extensions! Complete as needed. */
 
 		/* typedef int ALenum */
@@ -51,5 +53,20 @@ namespace OpenAL
 
 		public const int AL_FORMAT_MONO_MSADPCM_SOFT =		0x1302;
 		public const int AL_FORMAT_STEREO_MSADPCM_SOFT =	0x1303;
+
+		public const int AL_FLOAT_SOFT =			0x1406;
+
+		public const int AL_MONO_SOFT =				0x1500;
+		public const int AL_STEREO_SOFT =			0x1501;
+
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern void alGetBufferSamplesSOFT(
+			uint buffer,
+			int offset,
+			int samples,
+			int channels,
+			int type,
+			IntPtr data
+		);
 	}
 }
