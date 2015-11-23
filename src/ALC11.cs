@@ -89,15 +89,7 @@ namespace OpenAL
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alcCaptureSamples(
 			IntPtr device,
-			byte[] buffer,
-			IntPtr samples
-		);
-
-		/* device refers to an ALCdevice*, samples to an ALCsizei */
-		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alcCaptureSamples(
-			IntPtr device,
-			short[] buffer,
+			IntPtr buffer,
 			IntPtr samples
 		);
 	}
