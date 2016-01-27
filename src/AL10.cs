@@ -454,6 +454,16 @@ namespace OpenAL
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern bool alIsBuffer(uint buffer);
 
+		/* data refers to a void*, size and freq to an ALsizei */
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern void alBufferData(
+			uint buffer,
+			int format,
+			IntPtr data,
+			IntPtr size,
+			IntPtr freq
+		);
+
 		/* size and freq refer to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alBufferData(
