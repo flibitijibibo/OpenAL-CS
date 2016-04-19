@@ -197,19 +197,19 @@ namespace OpenAL
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenEffects(IntPtr n, uint[] effects);
+		public static extern void alGenEffects(int n, uint[] effects);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenEffects(IntPtr n, out uint effects);
+		public static extern void alGenEffects(int n, out uint effects);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alDeleteEffects(IntPtr n, uint[] effects);
+		public static extern void alDeleteEffects(int n, uint[] effects);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alDeleteEffects(IntPtr n, ref uint effects);
+		public static extern void alDeleteEffects(int n, ref uint effects);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern bool alIsEffect(uint effect);
@@ -272,19 +272,19 @@ namespace OpenAL
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenFilters(IntPtr n, uint[] filters);
+		public static extern void alGenFilters(int n, uint[] filters);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenFilters(IntPtr n, out uint filters);
+		public static extern void alGenFilters(int n, out uint filters);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alDeleteFilters(IntPtr n, uint[] filters);
+		public static extern void alDeleteFilters(int n, uint[] filters);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alDeleteFilters(IntPtr n, ref uint filters);
+		public static extern void alDeleteFilters(int n, ref uint filters);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern bool alIsFilter(uint filter);
@@ -348,28 +348,28 @@ namespace OpenAL
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alGenAuxiliaryEffectSlots(
-			IntPtr n,
+			int n,
 			uint[] effectslots
 		);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alGenAuxiliaryEffectSlots(
-			IntPtr n,
+			int n,
 			out uint effectslots
 		);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alDeleteAuxiliaryEffectSlots(
-			IntPtr n,
+			int n,
 			uint[] effectslots
 		);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alDeleteAuxiliaryEffectSlots(
-			IntPtr n,
+			int n,
 			ref uint effectslots
 		);
 

@@ -254,19 +254,19 @@ namespace OpenAL
 
 		/* n refers to a ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenSources(IntPtr n, uint[] sources);
+		public static extern void alGenSources(int n, uint[] sources);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenSources(IntPtr n, out uint sources);
+		public static extern void alGenSources(int n, out uint sources);
 
 		/* n refers to a ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alDeleteSources(IntPtr n, uint[] sources);
+		public static extern void alDeleteSources(int n, uint[] sources);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alDeleteSources(IntPtr n, ref uint sources);
+		public static extern void alDeleteSources(int n, ref uint sources);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern bool alIsSource(uint source);
@@ -366,28 +366,28 @@ namespace OpenAL
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alSourcePlayv(
-			IntPtr n,
+			int n,
 			uint[] sources
 		);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alSourceStopv(
-			IntPtr n,
+			int n,
 			uint[] sources
 		);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alSourceRewindv(
-			IntPtr n,
+			int n,
 			uint[] sources
 		);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alSourcePausev(
-			IntPtr n,
+			int n,
 			uint[] sources
 		);
 
@@ -407,7 +407,7 @@ namespace OpenAL
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alSourceQueueBuffers(
 			uint source,
-			IntPtr nb,
+			int nb,
 			uint[] buffers
 		);
 
@@ -415,7 +415,7 @@ namespace OpenAL
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alSourceQueueBuffers(
 			uint source,
-			IntPtr nb,
+			int nb,
 			ref uint buffers
 		);
 
@@ -423,7 +423,7 @@ namespace OpenAL
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alSourceUnqueueBuffers(
 			uint source,
-			IntPtr nb,
+			int nb,
 			uint[] buffers
 		);
 
@@ -431,25 +431,25 @@ namespace OpenAL
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alSourceUnqueueBuffers(
 			uint source,
-			IntPtr nb,
+			int nb,
 			ref uint buffers
 		);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenBuffers(IntPtr n, uint[] buffers);
+		public static extern void alGenBuffers(int n, uint[] buffers);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alGenBuffers(IntPtr n, out uint buffers);
+		public static extern void alGenBuffers(int n, out uint buffers);
 
 		/* n refers to an ALsizei */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alDeleteBuffers(IntPtr n, uint[] buffers);
+		public static extern void alDeleteBuffers(int n, uint[] buffers);
 
 		/* n refers to an ALsizei. Overload provided to avoid uint[] alloc. */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alDeleteBuffers(IntPtr n, ref uint buffers);
+		public static extern void alDeleteBuffers(int n, ref uint buffers);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern bool alIsBuffer(uint buffer);
@@ -460,8 +460,8 @@ namespace OpenAL
 			uint buffer,
 			int format,
 			IntPtr data,
-			IntPtr size,
-			IntPtr freq
+			int size,
+			int freq
 		);
 
 		/* size and freq refer to an ALsizei */
@@ -470,8 +470,8 @@ namespace OpenAL
 			uint buffer,
 			int format,
 			byte[] data,
-			IntPtr size,
-			IntPtr freq
+			int size,
+			int freq
 		);
 
 		/* size and freq refer to an ALsizei */
@@ -480,8 +480,8 @@ namespace OpenAL
 			uint buffer,
 			int format,
 			short[] data,
-			IntPtr size,
-			IntPtr freq
+			int size,
+			int freq
 		);
 
 		/* size and freq refer to an ALsizei */
@@ -490,8 +490,8 @@ namespace OpenAL
 			uint buffer,
 			int format,
 			float[] data,
-			IntPtr size,
-			IntPtr freq
+			int size,
+			int freq
 		);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
