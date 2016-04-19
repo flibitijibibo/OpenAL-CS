@@ -120,7 +120,7 @@ namespace OpenAL
 		public static extern void alcGetIntegerv(
 			IntPtr device,
 			int param,
-			IntPtr size,
+			int size,
 			int[] values
 		);
 	}

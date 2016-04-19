@@ -70,7 +70,7 @@ namespace OpenAL
 				string devicename,
 			uint frequency,
 			int format,
-			IntPtr buffersize
+			int buffersize
 		);
 
 		/* device refers to an ALCdevice* */
@@ -90,7 +90,7 @@ namespace OpenAL
 		public static extern void alcCaptureSamples(
 			IntPtr device,
 			IntPtr buffer,
-			IntPtr samples
+			int samples
 		);
 	}
 }
