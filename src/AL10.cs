@@ -100,12 +100,16 @@ namespace OpenAL
 		public const int AL_RENDERER =			0xB003;
 		public const int AL_EXTENSIONS =		0xB004;
 
+		public const int AL_DOPPLER_FACTOR =		0xC000;
 		/* Deprecated! */
 		public const int AL_DOPPLER_VELOCITY =		0xC001;
 
 		public const int AL_DISTANCE_MODEL =		0xD000;
 		public const int AL_INVERSE_DISTANCE =		0xD001;
 		public const int AL_INVERSE_DISTANCE_CLAMPED =	0xD002;
+
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern void alDopplerFactor(float value);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alDistanceModel(int distanceModel);

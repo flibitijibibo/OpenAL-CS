@@ -42,12 +42,14 @@ namespace OpenAL
 		public const int AL_SAMPLE_OFFSET =		0x1025;
 		public const int AL_BYTE_OFFSET =		0x1026;
 
-		public const int AL_DOPPLER_FACTOR =		0xC000;
 		public const int AL_SPEED_OF_SOUND =		0xC004;
 
 		public const int AL_LINEAR_DISTANCE =		0xD003;
 		public const int AL_LINEAR_DISTANCE_CLAMPED =	0xD004;
 		public const int AL_EXPONENT_DISTANCE =		0xD005;
 		public const int AL_EXPONENT_DISTANCE_CLAMED =	0xD006;
+
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern void alSpeedOfSound(float value);
 	}
 }
