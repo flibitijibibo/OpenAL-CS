@@ -51,6 +51,8 @@ namespace OpenAL
 		public const int AL_FORMAT_MONO_MSADPCM_SOFT =		0x1302;
 		public const int AL_FORMAT_STEREO_MSADPCM_SOFT =	0x1303;
 
+		public const int AL_BYTE_SOFT =				0x1400;
+		public const int AL_SHORT_SOFT =			0x1402;
 		public const int AL_FLOAT_SOFT =			0x1406;
 
 		public const int AL_MONO_SOFT =				0x1500;
