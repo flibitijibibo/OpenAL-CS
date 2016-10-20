@@ -58,6 +58,8 @@ namespace OpenAL
 		public const int AL_MONO_SOFT =				0x1500;
 		public const int AL_STEREO_SOFT =			0x1501;
 
+		public const int AL_GAIN_LIMIT_SOFT =			0x200E;
+
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alGetBufferSamplesSOFT(
 			uint buffer,
