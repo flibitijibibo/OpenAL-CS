@@ -42,7 +42,7 @@ namespace OpenAL
 		public const int AL_SAMPLE_OFFSET =		0x1025;
 		public const int AL_BYTE_OFFSET =		0x1026;
 
-		public const int AL_SPEED_OF_SOUND =		0xC004;
+		public const int AL_SPEED_OF_SOUND =		0xC003;
 
 		public const int AL_LINEAR_DISTANCE =		0xD003;
 		public const int AL_LINEAR_DISTANCE_CLAMPED =	0xD004;
