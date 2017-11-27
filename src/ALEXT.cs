@@ -60,6 +60,25 @@ namespace OpenAL
 
 		public const int AL_GAIN_LIMIT_SOFT =			0x200E;
 
+		// HRTF related constants
+		public const int AL_STEREO_ANGLES =                     0x1030;
+		public const int ALC_HRTF_SOFT =                        0x1992;
+		public const int ALC_DONT_CARE_SOFT =                   0x0002;
+		public const int ALC_HRTF_STATUS_SOFT =                 0x1993;
+		public const int ALC_HRTF_DISABLED_SOFT =               0x0000;
+		public const int ALC_HRTF_ENABLED_SOFT =                0x0001;
+		public const int ALC_HRTF_DENIED_SOFT =                 0x0002;
+		public const int ALC_HRTF_REQUIRED_SOFT =               0x0003;
+		public const int ALC_HRTF_HEADPHONES_DETECTED_SOFT =    0x0004;
+		public const int ALC_HRTF_UNSUPPORTED_FORMAT_SOFT =     0x0005;
+		public const int ALC_NUM_HRTF_SPECIFIERS_SOFT =         0x1994;
+		public const int ALC_HRTF_SPECIFIER_SOFT =              0x1995;
+		public const int ALC_HRTF_ID_SOFT =                     0x1996;
+ 
+		// Spacializing constants
+		public const int AL_SOURCE_SPATIALIZE_SOFT =            0x1214;
+		public const int AL_AUTO_SOFT =                         0x0002;
+
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void alGetBufferSamplesSOFT(
 			uint buffer,
@@ -69,5 +88,16 @@ namespace OpenAL
 			int type,
 			IntPtr data
 		);
+
+		// HRTF related method signatures        
+		[DllImport(nativeLibName, EntryPoint = "alcGetStringiSOFT", CallingConvention = CallingConvention.Cdecl)]
+		private static extern IntPtr INTERNAL_alcGetStringiSOFT(IntPtr device, int param, int index);
+		public static string alcGetStringiSOFT(IntPtr device, int param, int index)
+		{
+			return Marshal.PtrToStringAnsi(INTERNAL_alcGetStringiSOFT(device, param, index));
+		}
+       
+		[DllImport(nativeLibName, EntryPoint = "alcResetDeviceSOFT", CallingConvention = CallingConvention.Cdecl)]
+		public static extern bool alcResetDeviceSoft(IntPtr device, int[] attribs);
 	}
 }
