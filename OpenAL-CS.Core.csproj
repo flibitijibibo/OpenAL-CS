@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Platforms>x64</Platforms>
+	</PropertyGroup>
+	<PropertyGroup>
+		<EnableDefaultItems>false</EnableDefaultItems>
+		<AssemblyName>OpenAL-CS</AssemblyName>
+		<RootNamespace>OpenAL</RootNamespace>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="src\ALC10.cs" />
+		<Compile Include="src\ALC11.cs" />
+		<Compile Include="src\AL10.cs" />
+		<Compile Include="src\AL11.cs" />
+		<Compile Include="src\ALEXT.cs" />
+		<Compile Include="src\EFX.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="OpenAL-CS.dll.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>
