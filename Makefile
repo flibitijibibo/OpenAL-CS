@@ -14,7 +14,7 @@ SRC = \
 
 debug: clean-debug
 	mkdir -p bin/Debug
-	cp OpenAL-CS.dll.config bin/Debug
+	cp app.config bin/Debug/OpenAL-CS.dll.config
 	dmcs /unsafe -debug -out:bin/Debug/OpenAL-CS.dll -target:library $(SRC)
 
 clean-debug:
@@ -22,7 +22,7 @@ clean-debug:
 
 release: clean-release
 	mkdir -p bin/Release
-	cp OpenAL-CS.dll.config bin/Release
+	cp app.config bin/Release/OpenAL-CS.dll.config
 	dmcs /unsafe -optimize -out:bin/Release/OpenAL-CS.dll -target:library $(SRC)
 
 clean-release:

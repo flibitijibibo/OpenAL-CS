@@ -78,8 +78,6 @@
     <Compile Include="src\EFX.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="OpenAL-CS.dll.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="app.config" />
   </ItemGroup>
 </Project>
