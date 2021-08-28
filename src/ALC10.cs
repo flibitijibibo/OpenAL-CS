@@ -51,6 +51,8 @@ namespace OpenAL
 		public const int ALC_INVALID_VALUE =		0xA004;
 		public const int ALC_OUT_OF_MEMORY =		0xA005;
 
+		public const int ALC_MAJOR_VERSION =		0x1000;
+		public const int ALC_MINOR_VERSION =		0x1001;
 		public const int ALC_ATTRIBUTES_SIZE =		0x1002;
 		public const int ALC_ALL_ATTRIBUTES =		0x1003;
 		public const int ALC_DEFAULT_DEVICE_SPECIFIER =	0x1004;
